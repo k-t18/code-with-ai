@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Ubuntu, Poppins } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/common/Navbar'
 
 const ubuntu = Ubuntu({
   subsets: ['latin'],
@@ -29,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${ubuntu.variable} ${poppins.variable}`}>
-      <body className="">{children}</body>
+      <body className="">
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
