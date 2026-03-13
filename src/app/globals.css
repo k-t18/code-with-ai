@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import '../styles/typography.css';
+@import '../styles/components.css';
+
+@theme {
+  /* ─── Fonts ─────────────────────────────────────────────────────────── */
+  --font-heading: 'Ubuntu', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* ─── Brand · Teal Blue ─────────────────────────────────────────────── */
+  --color-brand-50: #e6f2f2;
+  --color-brand-100: #b0d8d8;
+  --color-brand-200: #8ac5c5;
+  --color-brand-300: #54aaaa;
+  --color-brand-400: #339999;
+  --color-brand-500: #008080;
+  --color-brand-600: #007474;
+  --color-brand-700: #005b5b;
+  --color-brand-800: #004646;
+  --color-brand-900: #003636;
+
+  /* ─── Grays ─────────────────────────────────────────────────────────── */
+  --color-grays-50: #f9f9f9;
+  --color-grays-100: #f5f5f5;
+  --color-grays-200: #f0f0f0;
+  --color-grays-300: #e7e7e7;
+  --color-grays-400: #d5d5d5;
+  --color-grays-500: #b8b8b8;
+  --color-grays-600: #a0a0a0;
+  --color-grays-700: #818181;
+  --color-grays-800: #636363;
+  --color-grays-900: #4d4d4d;
+
+  /* ─── Warm White ─────────────────────────────────────────────────────── */
+  --color-warm-white-50: #fefdfb;
+  --color-warm-white-100: #fdfcf8;
+  --color-warm-white-200: #fbfaf5;
+  --color-warm-white-300: #f9f7f0;
+  --color-warm-white-400: #f6f3ea;
+  --color-warm-white-500: #f2efe4;
+  --color-warm-white-600: #e8e3d4;
+  --color-warm-white-700: #dad3c0;
+  --color-warm-white-800: #c5bcaa;
+  --color-warm-white-900: #aca293;
+
+  /* ─── Text ───────────────────────────────────────────────────────────── */
+  --color-charcoal: #333333;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ─── Semantic UI Aliases ────────────────────────────────────────────── */
+  --color-navbar: #008080;
+  --color-heading: #333333;
+  --color-text-muted: #818181;
+  --color-stroke: #e7e7e7;
+  --color-bg: #ffffff;
+
+  /* ─── Success ────────────────────────────────────────────────────────── */
+  --color-success-50: #f0faf0;
+  --color-success-100: #d4edda;
+  --color-success-200: #b2dfb5;
+  --color-success-300: #88cc8d;
+  --color-success-400: #66bb6a;
+  --color-success-500: #4caf50;
+  --color-success-600: #43a047;
+  --color-success-700: #388e3c;
+  --color-success-800: #2e7d32;
+  --color-success-900: #1b5e20;
+
+  /* ─── Warning ────────────────────────────────────────────────────────── */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+
+  /* ─── Danger ─────────────────────────────────────────────────────────── */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-danger-800: #991b1b;
+  --color-danger-900: #7f1d1d;
+
+  /* ─── Information ────────────────────────────────────────────────────── */
+  --color-information-50: #eff6ff;
+  --color-information-100: #dbeafe;
+  --color-information-200: #bfdbfe;
+  --color-information-300: #93c5fd;
+  --color-information-400: #60a5fa;
+  --color-information-500: #3b82f6;
+  --color-information-600: #2563eb;
+  --color-information-700: #1d4ed8;
+  --color-information-800: #1e40af;
+  --color-information-900: #1e3a8a;
+
+  /* ─── Other · Purple ─────────────────────────────────────────────────── */
+  --color-other-50: #faf5ff;
+  --color-other-100: #f3e8ff;
+  --color-other-200: #e9d5ff;
+  --color-other-300: #d8b4fe;
+  --color-other-400: #c084fc;
+  --color-other-500: #a855f7;
+  --color-other-600: #9333ea;
+  --color-other-700: #7e22ce;
+  --color-other-800: #6b21a8;
+  --color-other-900: #581c87;
+
+  /*
+   * ─── Typography Size Scale ───────────────────────────────────────────
+   * NOTE: Variables are prefixed --sz-* and --lh-* intentionally.
+   * Tailwind v4 auto-generates utilities from --text-* and --leading-* which
+   * would conflict with our custom @layer utilities classes in typography.css.
+   * Using --sz-* and --lh-* avoids that auto-generation.
+   */
+  --sz-h1: 32px;   --lh-h1: 40px;
+  --sz-h2: 24px;   --lh-h2: 32px;
+  --sz-h3: 20px;   --lh-h3: 28px;
+  --sz-h4: 16px;   --lh-h4: 24px;
+  --sz-h5: 14px;   --lh-h5: 22px;
+  --sz-h6: 12px;   --lh-h6: 18px;
+
+  --sz-body-lg: 14px;  --lh-body-lg: 22px;
+  --sz-body-md: 12px;  --lh-body-md: 20px;
+  --sz-body-sm: 10px;  --lh-body-sm: 16px;
+}

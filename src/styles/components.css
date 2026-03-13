@@ -1,0 +1,149 @@
+@layer components {
+  /* ─── Badge base ─────────────────────────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2 py-0.5;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-sm);
+    line-height: var(--lh-body-sm);
+    font-weight: 500;
+  }
+
+  /* Badge variants — base props repeated (cannot @apply .badge in Tailwind v4) */
+  .badge-success {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 bg-success-100 text-success-700;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-sm);
+    line-height: var(--lh-body-sm);
+    font-weight: 500;
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 bg-warning-100 text-warning-700;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-sm);
+    line-height: var(--lh-body-sm);
+    font-weight: 500;
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 bg-danger-100 text-danger-700;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-sm);
+    line-height: var(--lh-body-sm);
+    font-weight: 500;
+  }
+
+  .badge-info {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 bg-information-100 text-information-700;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-sm);
+    line-height: var(--lh-body-sm);
+    font-weight: 500;
+  }
+
+  .badge-other {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 bg-other-100 text-other-700;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-sm);
+    line-height: var(--lh-body-sm);
+    font-weight: 500;
+  }
+
+  /* ─── Button base ────────────────────────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+    font-family: var(--font-body);
+  }
+
+  /* Button variants — base props repeated (cannot @apply .btn in Tailwind v4) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+    @apply bg-brand-500 text-white hover:bg-brand-600 active:bg-brand-700;
+    font-family: var(--font-body);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+    @apply border border-brand-500 text-brand-500 hover:bg-brand-50 active:bg-brand-100;
+    font-family: var(--font-body);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+    @apply text-brand-500 hover:bg-brand-50 active:bg-brand-100;
+    font-family: var(--font-body);
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+    @apply bg-danger-500 text-white hover:bg-danger-600 active:bg-danger-700;
+    font-family: var(--font-body);
+  }
+
+  /* Button sizes */
+  .btn-sm {
+    @apply px-3 py-1.5;
+    font-size: var(--sz-body-sm);
+    line-height: var(--lh-body-sm);
+    font-weight: 500;
+  }
+
+  .btn-md {
+    @apply px-4 py-2;
+    font-size: var(--sz-body-md);
+    line-height: var(--lh-body-md);
+    font-weight: 500;
+  }
+
+  .btn-lg {
+    @apply px-5 py-2.5;
+    font-size: var(--sz-body-lg);
+    line-height: var(--lh-body-lg);
+    font-weight: 500;
+  }
+
+  /* ─── Card ───────────────────────────────────────────────────────────── */
+  .card {
+    @apply rounded-lg border border-stroke bg-bg p-4;
+  }
+
+  .card-header {
+    @apply mb-4 border-b border-stroke pb-4;
+  }
+
+  /* ─── Form ───────────────────────────────────────────────────────────── */
+  .input {
+    @apply w-full rounded-md border border-stroke px-3 py-2 outline-none transition-colors;
+    @apply focus:border-brand-500 focus:ring-1 focus:ring-brand-500;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-md);
+    line-height: var(--lh-body-md);
+    color: var(--color-heading);
+    background-color: var(--color-bg);
+  }
+
+  .input::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .label {
+    @apply mb-1 block;
+    font-family: var(--font-body);
+    font-size: var(--sz-body-md);
+    line-height: var(--lh-body-md);
+    font-weight: 500;
+    color: var(--color-heading);
+  }
+
+  /* ─── Divider ────────────────────────────────────────────────────────── */
+  .divider {
+    @apply border-t border-stroke;
+  }
+
+  /* ─── Status Indicators ──────────────────────────────────────────────── */
+  .status-dot         { @apply inline-block h-2 w-2 rounded-full; }
+  .status-dot-success { @apply inline-block h-2 w-2 rounded-full bg-success-500; }
+  .status-dot-warning { @apply inline-block h-2 w-2 rounded-full bg-warning-500; }
+  .status-dot-danger  { @apply inline-block h-2 w-2 rounded-full bg-danger-500; }
+  .status-dot-info    { @apply inline-block h-2 w-2 rounded-full bg-information-500; }
+}

@@ -1,0 +1,5 @@
+/*
+ * Design tokens have been moved to src/app/globals.css inside the @theme block.
+ * This keeps them in the same file as @import 'tailwindcss', which is required
+ * for reliable processing by Tailwind v4 + Turbopack.
+ */
